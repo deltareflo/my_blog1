@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} Mi Blog{% endblock %}
+
+
+        <!-- Page Header-->
+        {% block header_page %}
+        <header class="masthead" style="background-image: url('../static/assets/img/post-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{ blog.title }}</h1>
+                            <h2 class="subheading">{{ blog.subtitle }}</h2>
+                            <span class="meta">
+                                Posteado por
+                                <a href="#!">{{ user.nombre }}</a>
+                                en {{ blog.date.strftime('%B %d, %Y') }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+        <!-- Post Content-->
+        {% block main_page %}
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+
+                        {{ blog.contenido|safe }}
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v14.0" nonce="IWqVq1Jl"></script>
+        <div class="text-center">
+            <div class="fb-page"
+            data-tabs="timeline,events,messages"
+            data-href="https://www.facebook.com/100075992083668/"
+            data-width="380"
+            data-hide-cover="false">
+
+            </div>
+        </div>
+
+        {% endblock %}
+        <!-- Footer-->
+
+

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} Nuevo Blog {% endblock %}
+
+
+        <!-- Page Header-->
+        {% block header_page %}
+
+        <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Crear nuevo blog</h1>
+                            <span class="subheading">Nuevas ideas? Escríbelo.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+        <!-- Main Content-->
+        {% block main_page %}
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Creando nuevo contenido...</p>
+                        <div class="my-5">
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            <form id="blogForm" method="post" name="blogForm" action="">
+                                <div class="form-floating">
+                                    <input class="form-control" id="titulo" name="titulo" type="text" placeholder="Ingrese un titulo..." data-sb-validations="required" />
+                                    <label for="titulo">Título</label>
+
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="subtitulo" name="subtitulo" type="text" placeholder="Ingrese un subtítulo..." data-sb-validations="required" />
+                                    <label for="subtitulo">Subtitulo</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="contenido" name="contenido" placeholder="Escriba el blog aquí..." style="height: 12rem" data-sb-validations="required"></textarea>
+                                    <label for="contenido">Contenido</label>
+                                </div>
+                                <br />
+
+                                <!-- Submit Button-->
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Guardar blog</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+
